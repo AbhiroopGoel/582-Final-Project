@@ -1,0 +1,30 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import Tasks from './pages/Tasks';
+import Logs from './pages/Logs';
+import Audit from './pages/Audit';
+import Settings from './pages/Settings';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/logs" element={<Logs />} />
+        <Route path="/audit" element={<Audit />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
